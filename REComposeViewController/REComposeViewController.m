@@ -132,8 +132,12 @@
 - (void)presentFromViewController:(UIViewController *)controller
 {
     _rootViewController = controller;
-    [controller addChildViewController:self];
-    [controller.view addSubview:self.view];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        [controller addChildViewController:self];
+        [controller.view addSubview:self.view];
+    } else {
+        [[UIApplication sharedApplication].keyWindow addSubview:self.view];
+    }
     [self didMoveToParentViewController:controller];
 }
 
