@@ -258,6 +258,16 @@
     _sheetView.textView.text = text;
 }
 
+- (float)lineWidth
+{
+    return _sheetView.textView.ruledView.lineWidth;
+}
+
+- (void)setLineWidth:(float)width
+{
+    _sheetView.textView.ruledView.lineWidth = width;
+}
+
 - (NSString *)placeholderText
 {
     return _sheetView.textView.placeholder;

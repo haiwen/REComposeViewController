@@ -16,11 +16,13 @@
 //  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 #import <UIKit/UIKit.h>
+#import "DEComposeRuledView.h"
 
 @protocol DEComposeTextViewDelegate;
 
 @interface DEComposeTextView : UITextView
 
+@property (nonatomic, retain) DEComposeRuledView *ruledView;
 @property (nonatomic, retain) NSString *placeholder;
 @property (nonatomic, copy) NSString *accountName;
 @property (nonatomic, readonly) CGRect fromButtonFrame;  // So the popover can be displayed from this rect.

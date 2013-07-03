@@ -23,7 +23,6 @@
 @interface DEComposeTextView ()
 
 @property (nonatomic, retain) UILabel *placeholderLabel;
-@property (nonatomic, retain) DEComposeRuledView *ruledView;
 @property (nonatomic, retain) UIButton *fromButton;
 @property (nonatomic, retain) UIButton *accountButton;
 @property (nonatomic, retain) UIImageView *accountLine;
